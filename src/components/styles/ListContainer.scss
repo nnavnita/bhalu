@@ -1,6 +1,11 @@
 .list_container {
+    display: inline-flex;
+    flex: 1;
     padding: 2rem;
+    position: relative;
     border: 1px solid blue;
     border-radius: 5px;
-    position: relative;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }

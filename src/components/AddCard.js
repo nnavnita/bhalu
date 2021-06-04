@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { IconButton, Input, Icon, Modal, Button } from 'rsuite';
 
+import './styles/AddCard.scss';
+
 const AddCard = (props) => {
     const [showModal, setShowModal] = useState(false);
     const [input, setInput] = useState();
