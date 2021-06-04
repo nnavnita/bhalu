@@ -1,10 +1,10 @@
-import './App.css';
-import 'rsuite/dist/styles/rsuite-dark.css';
+import "./App.css";
+import "rsuite/dist/styles/rsuite-dark.css";
 
-import Screen from './components/Screen';
+import Screen from "./components/Screen";
 
 function App() {
-  return (<Screen />);
+  return <Screen />;
 }
 
 export default App;
