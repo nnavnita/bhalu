@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IconButton, Input, Icon, Modal, Button } from 'rsuite';
+import { IconButton, Icon, Modal, Form, FormControl, FormGroup, Button } from 'rsuite';
 
 import './styles/AddCard.scss';
 
@@ -44,7 +44,9 @@ const AddCard = (props) => {
                 <Modal.Title>Rental Listing for Comparison</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-            <Input placeholder="Paste the Link of a Rental Property" onChange={handleChange.bind(this)} />
+            <Form fluid><FormGroup>
+            <FormControl onChange={handleChange.bind(this)} />
+            </FormGroup></Form>
             </Modal.Body>
             <Modal.Footer>
                 <Button onClick={AddClickHandler} appearance="primary">
