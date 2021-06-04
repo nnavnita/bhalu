@@ -1,10 +1,12 @@
-import React from 'react';
-import ListContainer from './ListContainer';
-
-import './styles/Screen.scss';
+import React from "react";
+import ListContainer from "./ListContainer";
 
 const Screen = () => {
-    return (<div class="screen"><ListContainer/></div>);
+  return (
+    <div class="screen">
+      <ListContainer />
+    </div>
+  );
 };
 
 export default Screen;

@@ -1,9 +1,9 @@
-export const getDetailsFromWeeklyRent = (weekly) => {
+export function getDetailsFromWeeklyRent(weekly) {
   let _base = parseInt(weekly);
-  let _daily = base / 7;
-  let _monthly = daily * 30;
-  let _per_divident = monthly;
-  let _yearly = daily * 365;
+  let _daily = _base / 7;
+  let _monthly = _daily * 30;
+  let _per_divident = _monthly;
+  let _yearly = _daily * 365;
 
   const data = {
     base: _base,
@@ -14,4 +14,4 @@ export const getDetailsFromWeeklyRent = (weekly) => {
   };
 
   return data;
-};
+}
