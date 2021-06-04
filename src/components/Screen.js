@@ -3,7 +3,7 @@ import ListContainer from "./ListContainer";
 
 const Screen = () => {
   return (
-    <div class="screen">
+    <div className="screen">
       <ListContainer />
     </div>
   );
