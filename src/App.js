@@ -1,4 +1,5 @@
 import './App.css';
+import 'rsuite/dist/styles/rsuite-dark.css';
 
 import Screen from './components/Screen';
 
