@@ -1,9 +1,9 @@
-import './App.css';
+import "./App.css";
 
-import Screen from './components/Screen';
+import Screen from "./components/Screen";
 
 function App() {
-  return (<Screen />);
+  return <Screen />;
 }
 
 export default App;
