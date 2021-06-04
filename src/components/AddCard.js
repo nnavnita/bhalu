@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { IconButton, Icon, Modal, Button } from 'rsuite';
+import { IconButton, Input, Icon, Modal, Button } from 'rsuite';
 
-const AddCard = () => {
+const AddCard = (props) => {
     const [showModal, setShowModal] = useState(false);
-
+    const [input, setInput] = useState();
+    
     const openAddModal = () => {
         setShowModal(true);
     }
@@ -16,7 +17,20 @@ const AddCard = () => {
         return showModal;
     }
 
-    return (<div class="add_card">
+    const getInput = () => {
+        return input;
+    }
+
+    const handleChange = (input) => {
+        setInput(input);
+    }
+
+    const AddClickHandler = () => {
+        closeAddModal();
+        props.OkClickHandler(getInput());
+    }
+
+    return (<div className="add_card">
         <IconButton 
             icon={<Icon icon="plus" />}
             circle
@@ -24,17 +38,20 @@ const AddCard = () => {
             onClick={openAddModal}
         />
         <Modal show={getShowModal()} onHide={closeAddModal}>
-        <Modal.Header>
-            <Modal.Title>Modal Title</Modal.Title>
-          </Modal.Header>
-          <Modal.Footer>
-            <Button onClick={closeAddModal} appearance="primary">
-              Ok
-            </Button>
-            <Button onClick={closeAddModal} appearance="subtle">
-              Cancel
-            </Button>
-          </Modal.Footer>
+            <Modal.Header>
+                <Modal.Title>Rental Listing for Comparison</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+            <Input placeholder="Paste the Link of a Rental Property" onChange={handleChange.bind(this)} />
+            </Modal.Body>
+            <Modal.Footer>
+                <Button onClick={AddClickHandler} appearance="primary">
+                Add
+                </Button>
+                <Button onClick={closeAddModal} appearance="subtle">
+                Cancel
+                </Button>
+            </Modal.Footer>
         </Modal>
     </div>);
 }
