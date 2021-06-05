@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { IconButton, Icon, Modal, Form, FormControl, FormGroup, Button } from 'rsuite';
+import { IconButton, Icon } from 'rsuite';
 
+import AddCardModal from './AddCardModal';
 import './styles/AddCard.scss';
 
 const AddCard = (props) => {
     const [showModal, setShowModal] = useState(false);
-    const [input, setInput] = useState();
+    const [input, setInput] = useState({value: '', label: ''});
+    const [tenants, setTenants] = useState(1);
     
     const openAddModal = () => {
         setShowModal(true);
@@ -23,8 +25,12 @@ const AddCard = (props) => {
         return input;
     }
 
-    const handleChange = (input) => {
-        setInput(input);
+    const handleChangeLink = (input) => {
+        setInput({value: input, label: 'link'});
+    }
+
+    const handleChangeRent = (input) => {
+        setInput({value: input, label: 'rent'});
     }
 
     const AddClickHandler = () => {
@@ -39,24 +45,7 @@ const AddCard = (props) => {
             size="lg"
             onClick={openAddModal}
         />
-        <Modal show={getShowModal()} onHide={closeAddModal}>
-            <Modal.Header>
-                <Modal.Title>Rental Listing for Comparison</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-            <Form fluid><FormGroup>
-            <FormControl onChange={handleChange.bind(this)} />
-            </FormGroup></Form>
-            </Modal.Body>
-            <Modal.Footer>
-                <Button onClick={AddClickHandler} appearance="primary">
-                Add
-                </Button>
-                <Button onClick={closeAddModal} appearance="subtle">
-                Cancel
-                </Button>
-            </Modal.Footer>
-        </Modal>
+        <AddCardModal closeAddModal={closeAddModal} getShowModal={getShowModal} handleChangeLink={handleChangeLink} handleChangeRent={handleChangeRent}  AddClickHandler={AddClickHandler} />
     </div>);
 }
 
