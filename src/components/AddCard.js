@@ -7,7 +7,6 @@ import './styles/AddCard.scss';
 const AddCard = (props) => {
     const [showModal, setShowModal] = useState(false);
     const [input, setInput] = useState({value: '', label: ''});
-    const [tenants, setTenants] = useState(1);
     
     const openAddModal = () => {
         setShowModal(true);
