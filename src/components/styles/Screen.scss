@@ -18,6 +18,9 @@
 
     .rs-btn-toggle {
         background-color: #169de0;
+        &:hover {
+            background-color: grey;
+        }
     }
 
     .rs-btn-toggle-checked {
