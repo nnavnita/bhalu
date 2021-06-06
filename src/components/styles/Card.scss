@@ -39,4 +39,14 @@
             color: #FFFFFF;
         }
     }
+
+    .heading {
+        display: flex;
+        justify-content: space-between;
+
+        .available_date {
+            font-size: 0.6rem;
+            color: #84C1FF; 
+        }
+    }
 }

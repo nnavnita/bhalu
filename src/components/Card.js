@@ -51,8 +51,14 @@ const Card = (props) => {
     </tbody></table>
     </Panel>
     </PanelGroup>;
-
-    const heading = 'LISTING ' + props.cardIndex;
+    let options = { year: 'numeric', month: 'short', day: 'numeric' };
+    const heading = <div className='heading'>
+        <span className='listing_name'>
+            Listing {props.cardIndex}
+        </span>
+        <span className='available_date'>
+            <Icon icon="calendar-o" /> {props.date.toLocaleDateString("en-US", options)}
+        </span></div>;
 
     return(<Panel className='card' shaded bordered bodyFill style={{ display: 'inline-block' }}>
         <img alt="" src="https://illlustrations.co/static/f694d61c3ee4e05404856ac0def3fded/day31-sweet-home.png" style={{ width: '16rem', height: '14rem'}} />
