@@ -80,7 +80,7 @@ const Hero = ({
                     tag="a"
                     color="dark"
                     wideMobile
-                    href="https://github.com/nnavnita/bhalu"
+                    href="https://github.com/syedm1/bhalu"
                   >
                     View on Github
                   </Button>
