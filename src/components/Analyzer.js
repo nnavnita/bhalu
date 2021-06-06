@@ -66,7 +66,7 @@ const Analyzer = ({
       {/* <div className="theme_toggle">
       <Toggle size="lg" defaultChecked unCheckedChildren={<Icon icon="sun-o" size="2x" />} checkedChildren={<Icon icon="moon-o" size="2x" />} />
     </div> */}
-      <Screen />;
+      <Screen />
     </div>
   );
 };
