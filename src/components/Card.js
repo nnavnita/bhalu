@@ -4,39 +4,34 @@ import { IconButton, Icon, Panel, PanelGroup } from 'rsuite';
 import './styles/Card.scss';
 
 const Card = (props) => {
-    let cardData;
-    if (props.data) {
-        // const rentData = [
-        //     { 'label': 'per day', 'value': 'per day'},
-        //     { 'label': 'per week', 'value': 'per week'},
-        //     { 'label': 'per fortnight', 'value': 'per fortnight'},
-        //     { 'label': 'per month', 'value': 'per month'},
-        //     { 'label': 'per year', 'value': 'per year'}
-        // ];
-        cardData = <PanelGroup accordion bordered>
-        <Panel defaultExpanded style={{backgroundColor: '#272A2D'}} header="Total Rent" collapsible bordered>
-        <table>
-        <tr>
-           <th>Per day: </th>
-           <td>${props.data.daily}</td></tr>
-        <tr>
-            <th>Per week: </th>
-            <td>${props.data.weekly}</td></tr>
-        <tr>
-            <th>Per fortnight: </th>
-            <td>${props.data.fortnightly}</td></tr>
-        <tr>
-            <th>Per month: </th>
-            <td>${props.data.monthly}</td></tr>
-        <tr>
-            <th>Per year: </th>
-            <td>${props.data.yearly}</td></tr>
-        </table>
-        </Panel>
-        </PanelGroup>;
-    } else {
-        cardData = <small>{props.text}</small>;
-    }
+    // const rentData = [
+    //     { 'label': 'per day', 'value': 'per day'},
+    //     { 'label': 'per week', 'value': 'per week'},
+    //     { 'label': 'per fortnight', 'value': 'per fortnight'},
+    //     { 'label': 'per month', 'value': 'per month'},
+    //     { 'label': 'per year', 'value': 'per year'}
+    // ];
+    const cardData = <PanelGroup accordion bordered>
+    <Panel defaultExpanded style={{backgroundColor: '#272A2D'}} header="Total Rent" collapsible bordered>
+    <table><tbody>
+    <tr>
+        <th>Per day: </th>
+        <td>${props.data.daily}</td></tr>
+    <tr>
+        <th>Per week: </th>
+        <td>${props.data.weekly}</td></tr>
+    <tr>
+        <th>Per fortnight: </th>
+        <td>${props.data.fortnightly}</td></tr>
+    <tr>
+        <th>Per month: </th>
+        <td>${props.data.monthly}</td></tr>
+    <tr>
+        <th>Per year: </th>
+        <td>${props.data.yearly}</td></tr>
+    </tbody></table>
+    </Panel>
+    </PanelGroup>;
 
     const heading = 'LISTING ' + props.cardIndex;
 
