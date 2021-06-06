@@ -76,8 +76,9 @@ const AboutUs = ({
                 <h3 className="mt-0 mb-12">Mohammed Sharukh Syed</h3>
                 <p className="m-0">
                   I was trying to find rental property and found the whole
-                  process frustrating to keep track of properties, so I called up
-                  friends (other bhalu founders) to build bhalu over the weekend!
+                  process frustrating to keep track of properties, so I called
+                  up friends (other bhalu founders) to build bhalu over the
+                  weekend!
                 </p>
               </div>
               <div
@@ -106,7 +107,10 @@ const AboutUs = ({
                 </div>
                 <h3 className="mt-0 mb-12">Navnita Nandakumar</h3>
                 <p className="m-0">
-                  I've moved apartments quite a bit over the past few years and know what a pain it is to compare listings and do all the math to find the right place. When Sharukh reached out to me with his idea for bhalu, I just knew I had to be a part of it! 
+                  I've moved apartments quite a bit over the past few years and
+                  know what a pain it is to compare listings and do all the math
+                  to find the right place. When Sharukh reached out to me with
+                  his idea for bhalu, I just knew I had to be a part of it!
                 </p>
               </div>
               <div
@@ -135,10 +139,11 @@ const AboutUs = ({
                 </div>
                 <h3 className="mt-0 mb-12">Harsheen Kapur</h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                  — Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  I've always wanted to find a place which has required
+                  amenities and affordable at the same time. But, it's been a
+                  difficult task to switch multiple tabs to find the perfect
+                  place. When this idea was pitched to me, I'd knew we could
+                  find the best of both worlds in one go!
                 </p>
               </div>
               <div
@@ -166,7 +171,10 @@ const AboutUs = ({
                 </div>
                 <h3 className="mt-0 mb-12">Sarthak Sabarwal</h3>
                 <p className="m-0">
-                I struggle everytime to search and filter properties on the net, mainly because the listings are on multiple websites. The idea of bhalu was to solve this problem by bringing customised results under one platform.
+                  I struggle everytime to search and filter properties on the
+                  net, mainly because the listings are on multiple websites. The
+                  idea of bhalu was to solve this problem by bringing customised
+                  results under one platform.
                 </p>
               </div>
               <div
