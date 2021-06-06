@@ -17,14 +17,10 @@ const AddCardModal = (props) => {
             </Modal.Header>
             <Modal.Body>
             <Form fluid>
-                <FormGroup className='input_link'>
-                    <FormControl placeholder='Enter link of rental listing' onChange={props.handleChangeLink.bind(this)} />
-                </FormGroup>
-                <div className='sidelines'><span className='text'>OR</span></div>
-                <div className='manual_entry_wrapper'>
-                <FormGroup className='manual_entry'>
-                    <FormControl placeholder='Enter rent amount' onChange={props.handleChangeRent.bind(this)} />
-                    <InputPicker data={rentData} defaultValue={ 'per week' } />
+                <div className='modal_wrapper'>
+                <FormGroup className='txt_rent'>
+                    <FormControl placeholder='Enter rent amount' onChange={props.handleChange.bind(this, 'rent_amount')} />
+                    <InputPicker data={rentData} defaultValue={ 'per week' } onChange={props.handleChange.bind(this, 'rent_period')} />
                 </FormGroup>
                 </div>
             </Form>

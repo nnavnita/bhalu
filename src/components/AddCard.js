@@ -6,7 +6,7 @@ import './styles/AddCard.scss';
 
 const AddCard = (props) => {
     const [showModal, setShowModal] = useState(false);
-    const [input, setInput] = useState({value: '', label: ''});
+    const [input, setInput] = useState({'rent_period': 'per week'});
     
     const openAddModal = () => {
         setShowModal(true);
@@ -24,12 +24,10 @@ const AddCard = (props) => {
         return input;
     }
 
-    const handleChangeLink = (input) => {
-        setInput({value: input, label: 'link'});
-    }
-
-    const handleChangeRent = (input) => {
-        setInput({value: input, label: 'rent'});
+    const handleChange = (key, value) => {
+        let _input = input;
+        _input[key] = value;
+        setInput(_input);
     }
 
     const AddClickHandler = () => {
@@ -44,7 +42,7 @@ const AddCard = (props) => {
             size="lg"
             onClick={openAddModal}
         />
-        <AddCardModal closeAddModal={closeAddModal} getShowModal={getShowModal} handleChangeLink={handleChangeLink} handleChangeRent={handleChangeRent}  AddClickHandler={AddClickHandler} />
+        <AddCardModal closeAddModal={closeAddModal} getShowModal={getShowModal} handleChange={handleChange}  AddClickHandler={AddClickHandler} />
     </div>);
 }
 

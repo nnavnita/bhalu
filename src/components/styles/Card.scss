@@ -1,4 +1,30 @@
 .card {
     position: relative;
     margin: 1rem;
+    width: 16rem;
+
+    .rent_details {
+        background-color: #272A2D;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    table {
+        margin: 0;
+        width: 100%;
+        text-align: left;
+        color: #FAFAFA;
+
+        caption {
+            background-color: #FAFAFA;
+            color: #272A2D;
+            margin: 0 0 1rem 0;
+            font-weight: bold;
+            border-radius: 1rem;
+        }
+
+        th {
+            color: #FFFFFF;
+        }
+    }
 }

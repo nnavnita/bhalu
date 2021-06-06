@@ -8,26 +8,13 @@
     }
 }
 
-.sidelines {
-    text-align: center; 
-    border-bottom: 0.1rem solid #a4a9b3; 
-    line-height: 0rem;
-    margin: 3rem; 
-    margin-bottom: 1rem;
-
-    .text {
-        background-color: #292d33;
-        padding: 1rem; 
-        font-size: 1rem;
-    }
-} 
-.manual_entry_wrapper {
+.modal_wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.manual_entry {
+.txt_rent {
     flex: 1;
     display: flex;
     margin: 2rem;
