@@ -3,10 +3,20 @@
     margin: 1rem;
     width: 16rem;
 
-    .rent_details {
-        background-color: #272A2D;
-        border-radius: 1rem;
-        padding: 1rem;
+    .btn_ops {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+    }
+
+    &:hover img {
+        opacity: 0.2;
+    }
+    
+    &:hover .btn_ops {
+        display:inline-flex;
+        justify-content: space-between;
     }
 
     table {
