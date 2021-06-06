@@ -9,7 +9,10 @@ const AddCard = (props) => {
     const [input, setInput] = useState({
         'rent_period': 'per week',
         'num_tenants': 1,
-        'available_date': new Date()
+        'available_date': new Date(),
+        'bed': 1,
+        'bath': 1,
+        'car': 1
     });
     
     const openAddModal = () => {

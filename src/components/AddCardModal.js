@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Form, FormControl, DatePicker, FormGroup, Button, InputPicker, InputNumber } from 'rsuite';
+import { Modal, Form, Icon, FormControl, DatePicker, FormGroup, Button, InputPicker, InputNumber } from 'rsuite';
 
 import './styles/AddCardModal.scss';
 
@@ -34,6 +34,14 @@ const AddCardModal = (props) => {
                 Available from
                 <FormGroup className='txt_rent'>
                     <DatePicker defaultValue={new Date()} onChange={props.handleChange.bind(this, 'available_date')} />
+                </FormGroup>
+                </div>
+                <div className='modal_wrapper'>
+                Features
+                <FormGroup className='txt_rent'>
+                    <InputNumber style={{width: '6rem'}} defaultValue={1} min={0} prefix={<Icon icon="bed" />} onChange={props.handleChange.bind(this, 'bed')}/>
+                    <InputNumber style={{width: '6rem'}} defaultValue={1} min={0} prefix={<Icon icon="shower" />} onChange={props.handleChange.bind(this, 'bath')}/>
+                    <InputNumber style={{width: '6rem'}} defaultValue={1} min={0} prefix={<Icon icon="car" />} onChange={props.handleChange.bind(this, 'car')}/>
                 </FormGroup>
                 </div>
             </Form>
