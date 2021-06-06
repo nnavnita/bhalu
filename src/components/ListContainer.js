@@ -13,7 +13,7 @@ const ListContainer = () => {
     }
 
     const AddNewListing = (input) => {
-        const data = getRentBreakdown(input['rent_amount'], 1, input['rent_period']);
+        const data = getRentBreakdown(input['rent_amount'], input['num_tenants'], input['rent_period']);
         setListing(current => [...current, <Card data={data} cardIndex={getListing().length + 1} />]);
     }
 

@@ -2,28 +2,38 @@ export function getRentBreakdown(amount, tenants, period) {
   let data = {};
   switch (period) {
     case "per day":
-      data = getRentBreakdownDaily(amount, tenants);
+      data = getRentBreakdownDaily(amount);
       break;
     case "per week":
-      data = getRentBreakdownWeekly(amount, tenants);
+      data = getRentBreakdownWeekly(amount);
       break;
     case "per fortnight":
-      data = getRentBreakdownFortnightly(amount, tenants);
+      data = getRentBreakdownFortnightly(amount);
       break;
     case "per month":
-      data = getRentBreakdownMonthly(amount, tenants);
+      data = getRentBreakdownMonthly(amount);
       break;
     case "per year":
-      data = getRentBreakdownYearly(amount, tenants);
+      data = getRentBreakdownYearly(amount);
       break;
     default:
       console.log("invalid rent period");
   }
 
-  return data;
+  return getTenantBreakdown(data, tenants);
 }
 
-export function getRentBreakdownWeekly(amount, tenants) {
+function getTenantBreakdown(data, tenants) {
+  let perTenant = {}
+
+  for (const [key, value] of Object.entries(data)) {
+    perTenant[key] = (value/tenants).toFixed(2);
+  }
+
+  return {'totalRent': data, 'perTenant': perTenant};
+}
+
+function getRentBreakdownWeekly(amount) {
   let _weekly = parseInt(amount);
   let _fortnightly = _weekly * 2;
   let _daily = _weekly / 7;
@@ -41,7 +51,7 @@ export function getRentBreakdownWeekly(amount, tenants) {
   return data;
 }
 
-export function getRentBreakdownDaily(amount, tenants) {
+function getRentBreakdownDaily(amount) {
   let _daily = parseInt(amount);
   let _weekly = _daily * 7;
   let _fortnightly = _weekly * 2;
@@ -59,7 +69,7 @@ export function getRentBreakdownDaily(amount, tenants) {
   return data;
 }
 
-export function getRentBreakdownFortnightly(amount, tenants) {
+function getRentBreakdownFortnightly(amount) {
   let _fortnightly = parseInt(amount);
   let _weekly = _fortnightly / 2;
   let _daily = _weekly / 7;
@@ -77,7 +87,7 @@ export function getRentBreakdownFortnightly(amount, tenants) {
   return data;
 }
 
-export function getRentBreakdownMonthly(amount, tenants) {
+function getRentBreakdownMonthly(amount) {
   let _monthly = parseInt(amount);
   let _daily = _monthly / 30;
   let _weekly = _daily * 7;
@@ -95,7 +105,7 @@ export function getRentBreakdownMonthly(amount, tenants) {
   return data;
 }
 
-export function getRentBreakdownYearly(amount, tenants) {
+function getRentBreakdownYearly(amount) {
   let _yearly = parseInt(amount);
   let _monthly = _yearly / 12;
   let _daily = _yearly / 365;

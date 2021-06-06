@@ -16,19 +16,38 @@ const Card = (props) => {
     <table><tbody>
     <tr>
         <th>Per day: </th>
-        <td>${props.data.daily}</td></tr>
+        <td>${props.data.totalRent.daily}</td></tr>
     <tr>
         <th>Per week: </th>
-        <td>${props.data.weekly}</td></tr>
+        <td>${props.data.totalRent.weekly}</td></tr>
     <tr>
         <th>Per fortnight: </th>
-        <td>${props.data.fortnightly}</td></tr>
+        <td>${props.data.totalRent.fortnightly}</td></tr>
     <tr>
         <th>Per month: </th>
-        <td>${props.data.monthly}</td></tr>
+        <td>${props.data.totalRent.monthly}</td></tr>
     <tr>
         <th>Per year: </th>
-        <td>${props.data.yearly}</td></tr>
+        <td>${props.data.totalRent.yearly}</td></tr>
+    </tbody></table>
+    </Panel>
+    <Panel defaultExpanded style={{backgroundColor: '#272A2D'}} header="Per Tenant" collapsible bordered>
+    <table><tbody>
+    <tr>
+        <th>Per day: </th>
+        <td>${props.data.perTenant.daily}</td></tr>
+    <tr>
+        <th>Per week: </th>
+        <td>${props.data.perTenant.weekly}</td></tr>
+    <tr>
+        <th>Per fortnight: </th>
+        <td>${props.data.perTenant.fortnightly}</td></tr>
+    <tr>
+        <th>Per month: </th>
+        <td>${props.data.perTenant.monthly}</td></tr>
+    <tr>
+        <th>Per year: </th>
+        <td>${props.data.perTenant.yearly}</td></tr>
     </tbody></table>
     </Panel>
     </PanelGroup>;

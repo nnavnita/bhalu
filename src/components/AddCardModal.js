@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Form, FormControl, FormGroup, Button, InputPicker, InputNumber } from 'rsuite';
+import { Modal, Form, FormControl, ControlLabel, FormGroup, Button, InputPicker, InputNumber } from 'rsuite';
 
 import './styles/AddCardModal.scss';
 
@@ -18,14 +18,16 @@ const AddCardModal = (props) => {
             <Modal.Body>
             <Form fluid>
                 <div className='modal_wrapper'>
+                Rent Amount
                 <FormGroup className='txt_rent'>
                     <FormControl placeholder='Enter rent amount' onChange={props.handleChange.bind(this, 'rent_amount')} />
                     <InputPicker data={rentData} defaultValue={ 'per week' } onChange={props.handleChange.bind(this, 'rent_period')} />
                 </FormGroup>
                 </div>
                 <div className='modal_wrapper'>
+                Number of Tenants
                 <FormGroup className='txt_rent'>
-                <InputNumber step={1} />
+                    <InputNumber style={{width: '4rem'}} defaultValue={1} min={1} onChange={props.handleChange.bind(this, 'num_tenants')} />
                 </FormGroup>
                 </div>
             </Form>

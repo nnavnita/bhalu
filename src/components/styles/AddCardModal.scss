@@ -17,5 +17,9 @@
 .txt_rent {
     flex: 1;
     display: flex;
-    margin: 2rem;
+    margin: 0.5rem;
+
+    .rs-control-label {
+        font-size: 0.8rem;
+    }
 }

@@ -6,7 +6,7 @@ import './styles/AddCard.scss';
 
 const AddCard = (props) => {
     const [showModal, setShowModal] = useState(false);
-    const [input, setInput] = useState({'rent_period': 'per week'});
+    const [input, setInput] = useState({'rent_period': 'per week', 'num_tenants': 1});
     
     const openAddModal = () => {
         setShowModal(true);
@@ -26,7 +26,10 @@ const AddCard = (props) => {
 
     const handleChange = (key, value) => {
         let _input = input;
-        _input[key] = value;
+        if (key === 'num_tenants')
+            _input[key] = parseInt(value);
+        else
+            _input[key] = value;
         setInput(_input);
     }
 
