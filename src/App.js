@@ -2,7 +2,7 @@ import "./App.css";
 import "rsuite/dist/styles/rsuite-dark.css";
 
 import Screen from "./components/Screen";
-import { Icon, Toggle } from 'rsuite';
+// import { Icon, Toggle } from 'rsuite';
 
 function App() {
   return(<div className='screen dark'>
