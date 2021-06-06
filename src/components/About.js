@@ -166,10 +166,7 @@ const AboutUs = ({
                 </div>
                 <h3 className="mt-0 mb-12">Sarthak Sabarwal</h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                  — Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                I struggle everytime to search and filter properties on the net, mainly because the listings are on multiple websites. The idea of bhalu was to solve this problem by bringing customised results under one platform.
                 </p>
               </div>
               <div
