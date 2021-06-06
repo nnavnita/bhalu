@@ -6,6 +6,8 @@ import Button from "../elements/Button";
 import Image from "../elements/Image";
 import Modal from "../elements/Modal";
 
+import { Icon } from 'rsuite';
+
 const propTypes = {
   ...SectionProps.types,
 };
@@ -60,7 +62,7 @@ const Hero = ({
               className="mt-0 mb-16 reveal-from-bottom"
               data-reveal-delay="200"
             >
-              AI assistant to find your next{" "}
+              An AI assistant to help you find your next{" "}
               <span className="text-color-primary">Home</span>
             </h1>
             <div className="container-xs">
@@ -68,8 +70,8 @@ const Hero = ({
                 className="m-0 mb-32 reveal-from-bottom"
                 data-reveal-delay="400"
               >
-                House hunting made easy with data driven insights and Bhalu the
-                Artificial Intelligence's Recommendations
+                Bhalu makes house hunting easy with its Data Driven Insights 
+                Artificial Intelligence Recommendations
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
@@ -82,7 +84,7 @@ const Hero = ({
                     wideMobile
                     href="https://github.com/syedm1/bhalu"
                   >
-                    View on Github
+                    <Icon icon="github" size='lg' /> &nbsp; View source code
                   </Button>
                 </ButtonGroup>
               </div>

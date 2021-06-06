@@ -87,7 +87,7 @@ const AboutUs = ({
                 )}
                 data-reveal-container=".split-item"
               >
-                <Image
+                <Image className='about_img'
                   src={require("../assets/images/founders/sharukh.jpeg")}
                   alt="Features split 01"
                   width={528}
@@ -116,7 +116,7 @@ const AboutUs = ({
                 )}
                 data-reveal-container=".split-item"
               >
-                <Image
+                <Image className='about_img'
                   src={require("../assets/images/founders/navnita.jpeg")}
                   alt="Features split 02"
                   width={528}
@@ -148,7 +148,7 @@ const AboutUs = ({
                 )}
                 data-reveal-container=".split-item"
               >
-                <Image
+                <Image className='about_img'
                   src={require("../assets/images/founders/nikki.jpeg")}
                   alt="Features split 03"
                   width={528}
@@ -176,7 +176,7 @@ const AboutUs = ({
                 )}
                 data-reveal-container=".split-item"
               >
-                <Image
+                <Image className='about_img'
                   src={require("../assets/images/founders/sarthak.jpeg")}
                   alt="Features split 02"
                   width={528}

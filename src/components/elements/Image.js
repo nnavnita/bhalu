@@ -8,14 +8,15 @@ const propTypes = {
   ]).isRequired,
   width: PropTypes.number,
   height: PropTypes.number,
-  alt: PropTypes.string
+  alt: PropTypes.string,
+  borderRadius: PropTypes.string
 }
 
 const defaultProps = {
   src: undefined,
   width: undefined,
   height: undefined,
-  alt: undefined
+  alt: undefined,
 }
 
 const Image = ({
