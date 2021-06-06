@@ -1,23 +1,23 @@
 export function getRentBreakdown(amount, tenants, period) {
   let data = {};
-  switch(period) {
-    case 'per day':
+  switch (period) {
+    case "per day":
       data = getRentBreakdownDaily(amount, tenants);
       break;
-    case 'per week':
+    case "per week":
       data = getRentBreakdownWeekly(amount, tenants);
       break;
-    case 'per fortnight':
+    case "per fortnight":
       data = getRentBreakdownFortnightly(amount, tenants);
-      break;  
-    case 'per month':
+      break;
+    case "per month":
       data = getRentBreakdownMonthly(amount, tenants);
-      break;  
-    case 'per year':
+      break;
+    case "per year":
       data = getRentBreakdownYearly(amount, tenants);
-      break;  
+      break;
     default:
-      console.log('invalid rent period');
+      console.log("invalid rent period");
   }
 
   return data;
@@ -62,7 +62,7 @@ export function getRentBreakdownDaily(amount, tenants) {
 export function getRentBreakdownFortnightly(amount, tenants) {
   let _fortnightly = parseInt(amount);
   let _weekly = _fortnightly / 2;
-  let _daily =  _weekly / 7;
+  let _daily = _weekly / 7;
   let _monthly = _daily * 30;
   let _yearly = _daily * 365;
 
