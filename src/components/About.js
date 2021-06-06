@@ -76,8 +76,8 @@ const AboutUs = ({
                 <h3 className="mt-0 mb-12">Mohammed Sharukh Syed</h3>
                 <p className="m-0">
                   I was trying to find rental property and found the whole
-                  process frustrating to keep track of properties and called up
-                  friends(other bhalu founders) to build bhalu over weekend
+                  process frustrating to keep track of properties, so I called up
+                  friends (other bhalu founders) to build bhalu over the weekend!
                 </p>
               </div>
               <div
@@ -106,10 +106,7 @@ const AboutUs = ({
                 </div>
                 <h3 className="mt-0 mb-12">Navnita Nandakumar</h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                  — Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  I've moved apartments quite a bit over the past few years and know what a pain it is to compare listings and do all the math to find the right place. When Sharukh reached out to me with his idea for bhalu, I just knew I had to be a part of it! 
                 </p>
               </div>
               <div
