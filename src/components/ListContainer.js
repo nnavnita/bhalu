@@ -15,14 +15,7 @@ const ListContainer = () => {
     const AddNewListing = (input) => {
         if (input.label === 'rent') {
             const data = getDetailsFromWeeklyRent(input.value, 'weekly');
-            const cardText = <div className='rent_details'>
-                Per day: {data.daily}<br />
-                Per week: {data.base}<br />
-                Per fortnight: {data.base * 2}<br />
-                Per month: {data.monthly}<br />
-                Per year: {data.yearly}<br />
-            </div>;
-            setListing(current => [...current, <Card text={cardText} />]);
+            setListing(current => [...current, <Card data={data} />]);
         } else {
             setListing(current => [...current, <Card text={input.value}/>]);
         }
