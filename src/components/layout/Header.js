@@ -123,11 +123,25 @@ const Header = ({
                         </Link>
                       </li> */}
                       <li>
-                        <Link to="/Analyzer">App </Link>
+                        <Link to="/about">Home </Link>
                       </li>
-
                       <li>
-                        <Link to="/about">About Us </Link>
+                        <Link to="/about">Write a Review </Link>
+                      </li>
+                      <li>
+                        <Link to="/about">Reviews </Link>
+                      </li>
+                      <li>
+                        <Link to="/Analyzer">Compare </Link>
+                      </li>
+                      <li>
+                        <Link to="/about">About us </Link>
+                      </li>
+                      <li>
+                        <Link to="/about">Login </Link>
+                      </li>
+                      <li>
+                        <Link to="/about">Sign up </Link>
                       </li>
                     </ul>
                   )}
