@@ -13,6 +13,8 @@ import {
 } from "rsuite";
 import "./styles/WriteReview.scss";
 
+import { POST_REVIEWS_URL } from "./APIPaths";
+
 const WriteReviewDataForm = () => {
   const [address, setAddress] = useState("");
   const [agentName, setAgentName] = useState("");
@@ -41,7 +43,7 @@ const WriteReviewDataForm = () => {
 
     console.log("save details to db");
     console.log(dataForSubmission);
-    const post_url = "http://localhost:5000/api/reviews";
+    const post_url = POST_REVIEWS_URL;
     axios
       .post(post_url, dataForSubmission)
       .then(() => console.log("Review Added"))

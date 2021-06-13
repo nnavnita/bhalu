@@ -1,3 +1,5 @@
+import React, { useEffect, useRef } from "react";
+
 export function getRentBreakdown(amount, tenants, period) {
   let data = {};
   switch (period) {
@@ -24,13 +26,13 @@ export function getRentBreakdown(amount, tenants, period) {
 }
 
 function getTenantBreakdown(data, tenants) {
-  let perTenant = {}
+  let perTenant = {};
 
   for (const [key, value] of Object.entries(data)) {
-    perTenant[key] = (value/tenants).toFixed(2);
+    perTenant[key] = (value / tenants).toFixed(2);
   }
 
-  return {'totalRent': data, 'perTenant': perTenant};
+  return { totalRent: data, perTenant: perTenant };
 }
 
 function getRentBreakdownWeekly(amount) {
@@ -121,4 +123,24 @@ function getRentBreakdownYearly(amount) {
   };
 
   return data;
+}
+
+export function useInterval(callback, delay) {
+  const savedCallback = useRef();
+
+  // Remember the latest callback.
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  // Set up the interval.
+  useEffect(() => {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      let id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
 }

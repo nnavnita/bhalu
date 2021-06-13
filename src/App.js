@@ -12,6 +12,7 @@ import Home from "./views/Home";
 import AboutUs from "./components/About";
 import Analyzer from "./components/Analyzer";
 import WriteReview from "./components/WriteReview";
+import ListReviews from "./components/ListReviews";
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -57,6 +58,13 @@ const App = () => {
             exact
             path="/writereview"
             component={WriteReview}
+            layout={LayoutDefault}
+          />
+
+          <AppRoute
+            exact
+            path="/listreviews"
+            component={ListReviews}
             layout={LayoutDefault}
           />
         </Switch>

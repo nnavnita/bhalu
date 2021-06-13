@@ -129,7 +129,7 @@ const Header = ({
                         <Link to="/writereview">Write a Review </Link>
                       </li>
                       <li>
-                        <Link to="/about">Reviews </Link>
+                        <Link to="/listreviews">Reviews </Link>
                       </li>
                       <li>
                         <Link to="/Analyzer">Compare </Link>
