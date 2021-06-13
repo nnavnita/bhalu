@@ -123,10 +123,10 @@ const Header = ({
                         </Link>
                       </li> */}
                       <li>
-                        <Link to="/about">Home </Link>
+                        <Link to="/">Home </Link>
                       </li>
                       <li>
-                        <Link to="/about">Write a Review </Link>
+                        <Link to="/writereview">Write a Review </Link>
                       </li>
                       <li>
                         <Link to="/about">Reviews </Link>

@@ -1,0 +1,16 @@
+.writeReviewForm {
+  padding: 3rem 3rem 3rem 3rem;
+}
+
+.writeReviewContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.writeReviewBtns {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
